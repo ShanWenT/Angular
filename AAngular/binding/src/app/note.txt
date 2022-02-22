@@ -1,0 +1,73 @@
+Principles
+1. Do not repeat code
+2.single responsibility
+
+Services
+1.Share data
+2.app logic
+3.External interction
+
+Naming - name.Service.ts
+
+DI - Dependency Injection - frame work
+
+1.Code without DI
+class Engine{
+    constructor(newparameter){}
+}
+
+class Tries{
+    constructor(){}
+}
+
+//without DI
+class Car{
+    Engine;
+    tires;
+    constructor(){
+        this.Engine = new Engine();
+        this.Tries = new Tires();
+    }
+}
+
+//with DI
+class Car{
+    Engine;
+    tires;
+    constructor(engine, tires){
+        this.Engine = new Engine();
+        this.Tries = new Tires();
+    }
+}
+
+class Engine{
+    constructor(newparameter){}
+}
+
+
+var myEngine = new Engine();
+var myTires = new Tires();
+var depA = new Dependency();
+.
+.
+.
+var depZ = new Dependency();
+
+var myCar = new Car(myEngine, myTires, depA,.....,depZ)
+
+
+            Employee Service => Injector
+    EmpList                       Empdetials
+
+    1.Empservice class
+    2.with Injector
+    3.declare Dependency in EmpList and Empdetials
+
+    HTTP, Observables and RxJS
+1. HTTP Get request from Service
+2.receive the observable and cast it into an array
+3.subscribe to the obsevable from empList and Emp Details
+4.Assign the employee array to local var
+
+RxJS - Library
+Reactive Extensions for JS
